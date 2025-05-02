@@ -7,6 +7,7 @@ import NavBar from "./components/NavBar";
 import NotFound from "./screens/NotFound";
 import ProductDetails from "./screens/ProductDetails";
 import AddProduct from "./screens/AddProduct";
+import SideBar from "./components/SideBar";
 
 function App() {
   return (
@@ -15,9 +16,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/products/:id" element={<ProductDetails />} />
-        <Route path="/products/add" element={<AddProduct />} />
+        <Route path="/products" element={<SideBar />}>
+          <Route index element={<Products />} />
+          <Route path=":id" element={<ProductDetails />} />
+          <Route path="add" element={<AddProduct />} />
+        </Route>
 
         <Route path="/*" element={<NotFound />} />
       </Routes>
