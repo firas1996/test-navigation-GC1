@@ -15,7 +15,9 @@ const NavBar = () => {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/contact">Contact</Link>
+          <Link state={{ test: "bye !!" }} to="/contact">
+            Contact
+          </Link>
         </li>
         <li>
           <Link to="/products">Products</Link>

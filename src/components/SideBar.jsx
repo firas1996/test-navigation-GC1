@@ -15,7 +15,7 @@ const SideBar = () => {
           <Link to="/products/3">Product 3</Link>
         </li>
       </ul>
-      <Outlet />
+      <Outlet context={{ name: "ali" }} />
     </>
   );
 };

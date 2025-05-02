@@ -1,9 +1,11 @@
 import React from "react";
+import { useOutletContext } from "react-router-dom";
 
 const Products = () => {
+  const { name } = useOutletContext();
   return (
     <div>
-      <h1>Products Page</h1>
+      <h1>Products Page: {name} </h1>
     </div>
   );
 };

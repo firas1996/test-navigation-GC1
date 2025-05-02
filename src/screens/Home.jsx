@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const Home = () => {
   const navigate = useNavigate();
   const buttonContact = () => {
-    navigate("/contact");
+    navigate("/contact", { state: { test: "Hello World !!!" } });
   };
   return (
     <div>
